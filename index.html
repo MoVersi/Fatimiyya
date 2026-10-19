@@ -134,6 +134,26 @@
   .sermon .more a{color:var(--gold);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;padding-block:6px}
   .sermon .more a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 
+  /* PUBLICATIONS */
+  .pubs{background:#271d2c;padding-top:8px}
+  .pubs h2{font-size:clamp(1.6rem,7vw,2.1rem);line-height:1.2;margin:10px 0 26px;color:var(--moon);text-wrap:balance}
+  .pub-list{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+  .pub{display:grid;grid-template-columns:104px minmax(0,1fr);gap:16px;align-items:start;padding:14px;border-radius:16px;background:rgba(236,230,220,.05);border:1px solid rgba(210,171,98,.22)}
+  .pub-cover{width:104px;height:auto;aspect-ratio:2/3;object-fit:cover;border-radius:6px;box-shadow:0 8px 20px rgba(0,0,0,.45)}
+  .pub-info{display:flex;flex-direction:column;gap:6px;min-width:0}
+  .pub-lang{align-self:flex-start;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(210,171,98,.5);border-radius:999px;padding:3px 9px}
+  .pub-title{margin:2px 0 0;font-family:var(--display);font-weight:400;font-size:1.15rem;line-height:1.25;color:var(--moon)}
+  .pub-ar{font-family:var(--arabic);font-size:1.15rem;color:var(--gold);line-height:1.4}
+  .pub-author{font-size:.88rem;color:var(--moon-soft);font-style:italic}
+  .pub-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .pub-actions a{display:inline-flex;align-items:center;gap:6px;font-size:.88rem;text-decoration:none;padding:9px 14px;border-radius:999px;min-height:40px;box-sizing:border-box}
+  .pub-read{background:var(--gold);color:#1a1420}
+  .pub-dl{border:1px solid rgba(210,171,98,.6);color:var(--moon)}
+  .pub-actions a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .pub-soon{font-size:.85rem;color:var(--moon-soft);font-style:italic}
+  html[lang="gu"] .pub-lang, html[lang="ur"] .pub-lang{letter-spacing:.04em}
+  html[lang="ur"] .pubs h2{line-height:2}
+
   /* MOURNING -> KNOWING */
   .knowing{background:linear-gradient(#271d2c,#3a2a37)}
   .knowing .a{font-size:1.1rem;color:var(--moon-soft)}
@@ -359,6 +379,45 @@
     </div>
   </section>
 
+  <section class="pubs" id="publications">
+    <div class="wrap">
+      <p class="eyebrow rv" data-i18n="pubBy">Presented by Al-Mahdi Centre</p>
+      <h2 class="rv" data-i18n="pubTitle">Publications in honour of Lady Fatimah (SA)</h2>
+      <ul class="pub-list">
+        <li class="pub rv" data-pdf="">
+          <img class="pub-cover" src="publications/door-of-the-flower-of-paradise-on-fire.jpg" alt="Cover of Door of the Flower of Paradise on Fire" width="480" height="720" loading="lazy">
+          <div class="pub-info">
+            <span class="pub-lang">English</span>
+            <h3 class="pub-title">Door of the Flower of Paradise on Fire</h3><span class="pub-ar" lang="ar" dir="rtl">&#x628;&#x627;&#x628; &#x641;&#x627;&#x637;&#x645;&#x629; &#x627;&#x644;&#x632;&#x647;&#x631;&#x627;&#x621;</span>
+            <div class="pub-actions">
+              <span class="pub-soon" data-i18n="pubSoon">PDF coming soon</span>
+            </div>
+          </div>
+        </li>
+        <li class="pub rv" data-pdf="">
+          <img class="pub-cover" src="publications/fatima-the-cosmic-silhouette.jpg" alt="Cover of Fatima (sa): The Cosmic Silhouette" width="480" height="720" loading="lazy">
+          <div class="pub-info">
+            <span class="pub-lang">English</span>
+            <h3 class="pub-title">Fatima (sa): The Cosmic Silhouette</h3><span class="pub-author">Razia Batool Najafi</span>
+            <div class="pub-actions">
+              <span class="pub-soon" data-i18n="pubSoon">PDF coming soon</span>
+            </div>
+          </div>
+        </li>
+        <li class="pub rv" data-pdf="">
+          <img class="pub-cover" src="publications/the-secret-funeral.jpg" alt="Cover of The Secret Funeral" width="480" height="720" loading="lazy">
+          <div class="pub-info">
+            <span class="pub-lang">English</span>
+            <h3 class="pub-title">The Secret Funeral</h3>
+            <div class="pub-actions">
+              <span class="pub-soon" data-i18n="pubSoon">PDF coming soon</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
   <section class="knowing">
     <div class="wrap">
       <p class="a rv" data-i18n="mourn">Fatimiyya is therefore not only about mourning her loss.</p>
@@ -494,6 +553,7 @@
     c3:"Elewa ujumbe wake.",
     c4:"Na acha urithi wake uishi kupitia wewe.",
     hint:"Bofya maandishi kwa maelezo zaidi.",
+    pubTitle:"Machapisho kwa heshima ya Bibi Fatimah (a.s.)", pubBy:"Imewasilishwa na Al-Mahdi Centre", pubRead:"Soma", pubSoon:"PDF inakuja hivi karibuni",
     postersTitle:"Mabango ya kushiriki", postersSub:"Gusa bango ulione kwa ukubwa kamili, ulihifadhi au ulishiriki.", dl:"Pakua", shareP:"Shiriki", close:"Funga",
     promoTag:"Tovuti imetengenezwa na", promoLine:"Tovuti, programu, cloud na AI kwa taasisi yako.", promoCta:"Tembelea",
     sermonLabel:"Khutba",
@@ -550,6 +610,7 @@
     c3:"\u0627\u064f\u0646 \u06a9\u06d2 \u067e\u06cc\u063a\u0627\u0645 \u06a9\u0648 \u0633\u0645\u062c\u06be\u06cc\u06d2\u06d4",
     c4:"\u0627\u0648\u0631 \u0627\u064f\u0646 \u06a9\u06cc \u0645\u06cc\u0631\u0627\u062b \u06a9\u0648 \u0627\u067e\u0646\u06d2 \u0630\u0631\u06cc\u0639\u06d2 \u0632\u0646\u062f\u06c1 \u0631\u06a9\u06be\u06cc\u06d2\u06d4",
     hint:"\u0645\u0632\u06cc\u062f \u0645\u0639\u0644\u0648\u0645\u0627\u062a \u06a9\u06d2 \u0644\u06cc\u06d2 \u0645\u062a\u0646 \u067e\u0631 \u06a9\u0644\u06a9 \u06a9\u0631\u06cc\u06ba\u06d4",
+    pubTitle:"\u062c\u0646\u0627\u0628\u0650 \u0641\u0627\u0637\u0645\u06c1 (\u0633) \u06a9\u06d2 \u0627\u0639\u0632\u0627\u0632 \u0645\u06cc\u06ba \u0627\u0634\u0627\u0639\u062a\u06cc\u06ba", pubBy:"\u067e\u06cc\u0634\u06a9\u0634: \u0627\u0644\u0645\u06c1\u062f\u06cc \u0633\u06cc\u0646\u0679\u0631", pubRead:"\u067e\u0691\u06be\u06cc\u06ba", pubSoon:"\u067e\u06cc \u0688\u06cc \u0627\u06cc\u0641 \u062c\u0644\u062f \u0622 \u0631\u06c1\u06cc \u06c1\u06d2",
     postersTitle:"\u0634\u06cc\u0626\u0631 \u06a9\u0631\u0646\u06d2 \u06a9\u06d2 \u0644\u06cc\u06d2 \u067e\u0648\u0633\u0679\u0631\u0632", postersSub:"\u067e\u0648\u0633\u0679\u0631 \u06a9\u0648 \u0628\u0691\u0627 \u062f\u06cc\u06a9\u06be\u0646\u06d2\u060c \u0645\u062d\u0641\u0648\u0638 \u06a9\u0631\u0646\u06d2 \u06cc\u0627 \u0634\u06cc\u0626\u0631 \u06a9\u0631\u0646\u06d2 \u06a9\u06d2 \u0644\u06cc\u06d2 \u0627\u0633 \u067e\u0631 \u0679\u06cc\u067e \u06a9\u0631\u06cc\u06ba\u06d4", dl:"\u0688\u0627\u0624\u0646 \u0644\u0648\u0688 \u06a9\u0631\u06cc\u06ba", shareP:"\u0634\u06cc\u0626\u0631 \u06a9\u0631\u06cc\u06ba", close:"\u0628\u0646\u062f \u06a9\u0631\u06cc\u06ba",
     promoTag:"\u0648\u06cc\u0628 \u0633\u0627\u0626\u0679 \u062a\u06cc\u0627\u0631 \u06a9\u0631\u062f\u06c1", promoLine:"\u0622\u067e \u06a9\u06d2 \u0627\u062f\u0627\u0631\u06d2 \u06a9\u06d2 \u0644\u06cc\u06d2 \u0648\u06cc\u0628 \u0633\u0627\u0626\u0679\u0633\u060c \u0627\u06cc\u067e\u0633\u060c \u06a9\u0644\u0627\u0624\u0688 \u0627\u0648\u0631 \u0627\u06d2 \u0622\u0626\u06cc \u0622\u0679\u0648\u0645\u06cc\u0634\u0646\u06d4", promoCta:"\u0648\u0632\u0679 \u06a9\u0631\u06cc\u06ba",
     m1:"\u0627\u0646\u06c1\u06cc\u06ba \u067e\u06c1\u0686\u0627\u0646\u06cc\u06d2\u06d4", m2:"\u0627\u064f\u0646 \u0633\u06d2 \u0633\u06cc\u06a9\u06be\u06cc\u06d2\u06d4", m3:"\u0627\u064f\u0646 \u06a9\u06cc \u0627\u0642\u062f\u0627\u0631 \u06a9\u0648 \u0627\u067e\u0646\u0627\u0626\u06cc\u06d2\u06d4",
@@ -596,6 +657,7 @@
     c3:"\u0a8f\u0aae\u0aa8\u0acb \u0aaa\u0ac8\u0a97\u0abe\u0aae \u0ab8\u0aae\u0a9c\u0acb.",
     c4:"\u0a85\u0aa8\u0ac7 \u0a8f\u0aae\u0aa8\u0acb \u0ab5\u0abe\u0ab0\u0ab8\u0acb \u0aa4\u0aae\u0abe\u0ab0\u0abe \u0aa5\u0a95\u0ac0 \u0a9c\u0ac0\u0ab5\u0a82\u0aa4 \u0ab0\u0abe\u0a96\u0acb.",
     hint:"\u0ab5\u0aa7\u0ac1 \u0aae\u0abe\u0ab9\u0abf\u0aa4\u0ac0 \u0aae\u0abe\u0a9f\u0ac7 \u0ab2\u0a96\u0abe\u0aa3 \u0aaa\u0ab0 \u0a95\u0acd\u0ab2\u0abf\u0a95 \u0a95\u0ab0\u0acb.",
+    pubTitle:"\u0a9c\u0aa8\u0abe\u0aac\u0ac7 \u0aab\u0abe\u0aa4\u0abf\u0aae\u0abe (\u0ab8.\u0a85.) \u0aa8\u0abe \u0aae\u0abe\u0aa8\u0aae\u0abe\u0a82 \u0aaa\u0acd\u0ab0\u0a95\u0abe\u0ab6\u0aa8\u0acb", pubBy:"\u0a85\u0ab2-\u0aae\u0ab9\u0aa6\u0ac0 \u0ab8\u0ac7\u0aa8\u0acd\u0a9f\u0ab0 \u0aa6\u0acd\u0ab5\u0abe\u0ab0\u0abe \u0ab0\u0a9c\u0ac2", pubRead:"\u0ab5\u0abe\u0a82\u0a9a\u0acb", pubSoon:"PDF \u0a9f\u0ac2\u0a82\u0a95 \u0ab8\u0aae\u0aaf\u0aae\u0abe\u0a82",
     postersTitle:"\u0ab6\u0ac7\u0ab0 \u0a95\u0ab0\u0ab5\u0abe \u0aae\u0abe\u0a9f\u0ac7\u0aa8\u0abe \u0aaa\u0acb\u0ab8\u0acd\u0a9f\u0ab0", postersSub:"\u0aaa\u0acb\u0ab8\u0acd\u0a9f\u0ab0 \u0aae\u0acb\u0a9f\u0ac1\u0a82 \u0a9c\u0acb\u0ab5\u0abe, \u0ab8\u0abe\u0a9a\u0ab5\u0ab5\u0abe \u0a85\u0aa5\u0ab5\u0abe \u0ab6\u0ac7\u0ab0 \u0a95\u0ab0\u0ab5\u0abe \u0aa4\u0ac7\u0aa8\u0abe \u0aaa\u0ab0 \u0a9f\u0ac5\u0aaa \u0a95\u0ab0\u0acb.", dl:"\u0aa1\u0abe\u0a89\u0aa8\u0ab2\u0acb\u0aa1 \u0a95\u0ab0\u0acb", shareP:"\u0ab6\u0ac7\u0ab0 \u0a95\u0ab0\u0acb", close:"\u0aac\u0a82\u0aa7 \u0a95\u0ab0\u0acb",
     promoTag:"\u0ab5\u0ac7\u0aac\u0ab8\u0abe\u0a87\u0a9f \u0aac\u0aa8\u0abe\u0ab5\u0aa8\u0abe\u0ab0", promoLine:"\u0aa4\u0aae\u0abe\u0ab0\u0ac0 \u0ab8\u0a82\u0ab8\u0acd\u0aa5\u0abe \u0aae\u0abe\u0a9f\u0ac7 \u0ab5\u0ac7\u0aac\u0ab8\u0abe\u0a87\u0a9f, \u0a8f\u0aaa\u0acd\u0ab8, \u0a95\u0acd\u0ab2\u0abe\u0a89\u0aa1 \u0a85\u0aa8\u0ac7 AI \u0a93\u0a9f\u0acb\u0aae\u0ac7\u0ab6\u0aa8.", promoCta:"\u0aae\u0ac1\u0ab2\u0abe\u0a95\u0abe\u0aa4 \u0ab2\u0acb",
     sermonLabel:"\u0a96\u0ac1\u0aa4\u0acd\u0aac\u0acb",
