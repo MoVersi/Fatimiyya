@@ -100,6 +100,8 @@
   /* VERSI AI PROMO */
   .promo{background:var(--plum2);padding-block:8px 40px}
   .promo-card{display:flex;align-items:center;gap:16px;padding:16px 18px;border-radius:18px;text-decoration:none;color:var(--moon);background:linear-gradient(135deg,rgba(15,30,26,.85),rgba(14,22,24,.9));border:1px solid rgba(76,180,140,.35);box-shadow:0 8px 24px rgba(0,0,0,.25);transition:border-color .2s ease,transform .2s ease}
+  .promo-card.no-link:hover{transform:none;border-color:rgba(76,180,140,.35)}
+  .promo-cta[hidden]{display:none}
   .promo-card:hover{border-color:rgba(76,180,140,.75);transform:translateY(-2px)}
   .promo-card:focus-visible{outline:2px solid #4cb48c;outline-offset:3px}
   .promo-card img{width:64px;height:64px;border-radius:14px;flex:none}
@@ -710,6 +712,9 @@
   if (LANGS.indexOf(fromLink) > -1) { if (fromLink !== 'en') setLang(fromLink); else { try { localStorage.setItem('fatemiyya-lang','en'); } catch(e){} } }
   else { try { var saved = localStorage.getItem('fatemiyya-lang'); if (saved === 'gu' || saved === 'sw' || saved === 'ur') setLang(saved); } catch(e){} }
 
+
+  // Versi AI card: until a real link is set, show it as a plain credit (no dead button)
+  (function(){ var v = document.getElementById('versi-link'); if (v && v.getAttribute('href') === '#') { v.removeAttribute('href'); v.removeAttribute('target'); v.classList.add('no-link'); var c = v.querySelector('.promo-cta'); if (c) c.hidden = true; } })();
 
   // ---------- poster gallery ----------
   var POSTERS = {
