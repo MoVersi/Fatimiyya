@@ -45,15 +45,15 @@
     -webkit-mask-image:radial-gradient(ellipse at 50% 38%,#000 0%,transparent 72%);mask-image:radial-gradient(ellipse at 50% 38%,#000 0%,transparent 72%)}
 
   /* client logo, top left of the hero (scrolls away with it) */
-  .org-logo{position:absolute;z-index:2;top:calc(10px + env(safe-area-inset-top,0px));left:10px;width:128px;height:auto;filter:drop-shadow(0 0 14px rgba(200,30,30,.35)) drop-shadow(0 4px 10px rgba(0,0,0,.6))}
+  .org-logo{position:absolute;z-index:2;top:calc(10px + env(safe-area-inset-top,0px));left:12px;width:84px;height:auto;filter:drop-shadow(0 0 8px rgba(200,30,30,.18)) drop-shadow(0 3px 6px rgba(0,0,0,.5))}
   /* phones: the toggle starts just under the logo, then slides up to the top once the logo has scrolled away */
   @media (max-width:519px){
-    .org-logo{top:calc(62px + env(safe-area-inset-top,0px))}
-    header.hero{padding-top:calc(190px + env(safe-area-inset-top,0px))}
+    .org-logo{top:calc(60px + env(safe-area-inset-top,0px))}
+    header.hero{padding-top:calc(150px + env(safe-area-inset-top,0px))}
   }
   @media (min-width:520px){
-    .org-logo{width:150px}
-    header.hero{padding-top:calc(150px + env(safe-area-inset-top,0px))}
+    .org-logo{width:100px}
+    header.hero{padding-top:calc(120px + env(safe-area-inset-top,0px))}
   }
 
   /* HERO */
